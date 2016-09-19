@@ -26,6 +26,56 @@
 
 import UIKit
 
-public class DynamicFont {
-  
+public typealias DynamicFont = UIFont
+
+public extension DynamicFont {
+  public convenience init(family: DynamicFontFamilly, weight: DynamicFontWeight = .regular, size: CGFloat) {
+    self.init(familyName: family.rawValue, weight: weight, size: size)
+  }
+
+  public convenience init(familyName: String, weight: DynamicFontWeight = .regular, size: CGFloat) {
+    let descriptor = UIFontDescriptor(fontAttributes: [
+      UIFontDescriptorFamilyAttribute: familyName
+      ]).weighted(weight: weight)
+
+    self.init(descriptor: descriptor, size: size)
+  }
+
+  /**
+   The font family.
+   
+   A family is a constant value such as `.timesNewRoman` that identifies one or more specific fonts.
+   */
+  public var family: DynamicFontFamilly {
+    return DynamicFontFamilly(rawValue: familyName) ?? .helvetica
+  }
+
+  public func weighted(weight: DynamicFontWeight = .bold) -> DynamicFont {
+    return UIFontDescriptor(font: self).weighted(weight: weight).font
+  }
+
+  public var weight: DynamicFontWeight {
+    return UIFontDescriptor(font: self).weight
+  }
+
+  public func italicized() -> DynamicFont {
+    let descriptor = UIFontDescriptor(font: self)
+    var traits     = descriptor.symbolicTraits
+
+    traits.insert(.traitItalic)
+
+    return descriptor.withSymbolicTraits(traits)?.font ?? self
+  }
+
+  public var isItalic: Bool {
+    return UIFontDescriptor(font: self).symbolicTraits.contains(.traitItalic)
+  }
+
+  public func withSymbolicTraits(_ symbolicTraits: UIFontDescriptorSymbolicTraits) -> DynamicFont {
+    return UIFontDescriptor(font: self).withSymbolicTraits(symbolicTraits)?.font ?? self
+  }
+
+  public var symbolicTraits: UIFontDescriptorSymbolicTraits {
+    return UIFontDescriptor(font: self).symbolicTraits
+  }
 }
