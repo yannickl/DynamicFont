@@ -26,15 +26,27 @@
 
 import UIKit
 
+/**
+ The font weight.
+ */
 public enum DynamicFontWeight {
+  /// The ultra light font weight.
   case ultraLight
+  /// The thin font weight.
   case thin
+  /// The light font weight.
   case light
+  /// The regular font weight.
   case regular
+  /// The medium font weight.
   case medium
+  /// The semibold font weight.
   case semibold
+  /// The bold font weight.
   case bold
+  /// The heavy font weight.
   case heavy
+  /// The black font weight.
   case black
 
   static func fromTrait(trait: CGFloat) -> DynamicFontWeight {

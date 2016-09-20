@@ -11,3 +11,5 @@ font3.fontName
 
 let font4 = font3.weighted(weight: .light)
 font4.fontName
+
+print(UIFont.familyNames.map({ "case \($0.lowercased()) = \($0)" }))
