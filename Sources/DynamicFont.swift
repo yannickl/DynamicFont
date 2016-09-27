@@ -32,10 +32,30 @@ import UIKit
 public typealias DynamicFont = UIFont
 
 public extension DynamicFont {
-  public convenience init(family: DynamicFontFamilly, weight: DynamicFontWeight = .regular, size: CGFloat) {
+  // MARK: - Creating Fonts
+
+  /**
+   Creates and returns a font object for the specified font family, weight and size.
+
+   - Parameter family: A font family.
+   - Parameter weight: A font weight. The default value is `regular`.
+   - Parameter size: The size (in points) to which the font is scaled. This value must be greater than 0.0.
+   - Returns: A font object of the specified family, weight and size.
+   - SeeAlso: init:familyName:weight:size:
+   */
+  public convenience init(family: DynamicFontFamily, weight: DynamicFontWeight = .regular, size: CGFloat) {
     self.init(familyName: family.rawValue, weight: weight, size: size)
   }
 
+  /**
+   Creates and returns a font object for the specified font family name, weight and size.
+
+   - Parameter familyName: A font family name.
+   - Parameter weight: A font weight. The default value is `regular`.
+   - Parameter size: The size (in points) to which the font is scaled. This value must be greater than 0.0.
+   - Returns: A font object of the specified family name, weight and size.
+   - SeeAlso: init:familyName:weight:size:
+   */
   public convenience init(familyName: String, weight: DynamicFontWeight = .regular, size: CGFloat) {
     let descriptor = UIFontDescriptor(fontAttributes: [
       UIFontDescriptorFamilyAttribute: familyName
@@ -44,32 +64,46 @@ public extension DynamicFont {
     self.init(descriptor: descriptor, size: size)
   }
 
+  // MARK: - Getting Font Family
+
   /**
    The font family.
-   
+
    A family is a constant value such as `.timesNewRoman` that identifies one or more specific fonts.
    */
-  public var family: DynamicFontFamilly {
-    return DynamicFontFamilly(rawValue: familyName) ?? .helvetica
+  public var family: DynamicFontFamily {
+    return DynamicFontFamily(rawValue: familyName) ?? .helvetica
   }
 
+  // MARK: - Working with Font Attributes
+
+  /**
+   Returns a new font object that is rendered with the given weight.
+   
+   If the font can not be weighted with the corresponding value the returned font is the same as the receiver.
+   
+   - Parameter weight: The desired font weight. The default value is `bold`.
+   - Returns: An weighted font object.
+   */
   public func weighted(weight: DynamicFontWeight = .bold) -> DynamicFont {
     return UIFontDescriptor(font: self).weighted(weight: weight).font
   }
 
   /**
    The font weight of the receiver.
+   
+   - Returns: A font weight.
    */
   public var weight: DynamicFontWeight {
     return UIFontDescriptor(font: self).weight
   }
 
   /**
-   Returns the font object that are rendered in italic type.
-   
+   Returns a new font object that is rendered in italic type.
+
    If the font can not be italicized the returned font is the same as the receiver.
-   
-   - Returns: A font object.
+
+   - Returns: An italicized font object.
    */
   public func italicized() -> DynamicFont {
     let descriptor = UIFontDescriptor(font: self)
@@ -80,13 +114,20 @@ public extension DynamicFont {
     return descriptor.withSymbolicTraits(traits)?.font ?? UIFontDescriptor(font: self).font
   }
 
+  /**
+   Flag to know whether the font is in italic.
+
+   - Returns: A boolean indicates whether the font is in italic.
+   */
   public var isItalic: Bool {
     return UIFontDescriptor(font: self).symbolicTraits.contains(.traitItalic)
   }
 
+  // MARK: - Bridging Font Descriptor
+
   /**
    Returns a new dynamic font that is the same as the receiver but with the specified symbolic traits taking precedence over the existing ones.
-   
+
    - Parameter symbolicTraits: The new symbolic traits.
    - Returns: The new font descriptor.
    */

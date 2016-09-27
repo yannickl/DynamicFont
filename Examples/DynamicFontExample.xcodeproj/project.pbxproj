@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE2927911D9049C8000675F7 /* DynamicFontFamilly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2927901D9049C8000675F7 /* DynamicFontFamilly.swift */; };
-		CE2927921D9049C8000675F7 /* DynamicFontFamilly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2927901D9049C8000675F7 /* DynamicFontFamilly.swift */; };
-		CE2927931D9049CF000675F7 /* DynamicFontFamilly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2927901D9049C8000675F7 /* DynamicFontFamilly.swift */; };
+		CE2927911D9049C8000675F7 /* DynamicFontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2927901D9049C8000675F7 /* DynamicFontFamily.swift */; };
+		CE2927921D9049C8000675F7 /* DynamicFontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2927901D9049C8000675F7 /* DynamicFontFamily.swift */; };
+		CE2927931D9049CF000675F7 /* DynamicFontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2927901D9049C8000675F7 /* DynamicFontFamily.swift */; };
 		CE5787A91D884BE1003C89A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787A81D884BE1003C89A3 /* AppDelegate.swift */; };
 		CE5787AB1D884BE1003C89A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787AA1D884BE1003C89A3 /* ViewController.swift */; };
 		CE5787AE1D884BE1003C89A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5787AC1D884BE1003C89A3 /* Main.storyboard */; };
@@ -61,7 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CE2927901D9049C8000675F7 /* DynamicFontFamilly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicFontFamilly.swift; sourceTree = "<group>"; };
+		CE2927901D9049C8000675F7 /* DynamicFontFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicFontFamily.swift; sourceTree = "<group>"; };
 		CE5787A51D884BE1003C89A3 /* DynamicFontExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicFontExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5787A81D884BE1003C89A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5787AA1D884BE1003C89A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5787C91D884C53003C89A3 /* DynamicFont.swift */,
-				CE2927901D9049C8000675F7 /* DynamicFontFamilly.swift */,
+				CE2927901D9049C8000675F7 /* DynamicFontFamily.swift */,
 				CE5787E11D885352003C89A3 /* DynamicFontWeight.swift */,
 				CE5787E51D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift */,
 			);
@@ -325,7 +325,7 @@
 				CE5787CA1D884C53003C89A3 /* DynamicFont.swift in Sources */,
 				CE5787E21D885352003C89A3 /* DynamicFontWeight.swift in Sources */,
 				CE5787A91D884BE1003C89A3 /* AppDelegate.swift in Sources */,
-				CE2927921D9049C8000675F7 /* DynamicFontFamilly.swift in Sources */,
+				CE2927921D9049C8000675F7 /* DynamicFontFamily.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5787E41D88536E003C89A3 /* DynamicFontWeight.swift in Sources */,
-				CE2927931D9049CF000675F7 /* DynamicFontFamilly.swift in Sources */,
+				CE2927931D9049CF000675F7 /* DynamicFontFamily.swift in Sources */,
 				CE5787CB1D884C53003C89A3 /* DynamicFont.swift in Sources */,
 				CE5787E81D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift in Sources */,
 			);
@@ -345,7 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5787E31D88536C003C89A3 /* DynamicFontWeight.swift in Sources */,
-				CE2927911D9049C8000675F7 /* DynamicFontFamilly.swift in Sources */,
+				CE2927911D9049C8000675F7 /* DynamicFontFamily.swift in Sources */,
 				CE5787DA1D88528A003C89A3 /* DynamicFont.swift in Sources */,
 				CE5787E61D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift in Sources */,
 			);

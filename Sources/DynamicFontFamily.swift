@@ -29,7 +29,7 @@ import UIKit
 /**
  The available font families.
  */
-public enum DynamicFontFamilly: String {
+public enum DynamicFontFamily: String {
   /// The `Copperplate` font family.
   case copperplate = "Copperplate"
   /// The `Heiti SC` font family.
