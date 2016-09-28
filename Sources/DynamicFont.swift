@@ -86,7 +86,7 @@ public extension DynamicFont {
    - Parameter weight: The desired font weight. The default value is `bold`.
    - Returns: An weighted font object.
    */
-  public func weighted(weight: DynamicFontWeight = .bold) -> DynamicFont {
+  public func withWeight(_ weight: DynamicFontWeight = .bold) -> DynamicFont {
     let descriptor = fontDescriptor.addingAttributes([
       UIFontDescriptorFamilyAttribute: familyName,
       UIFontDescriptorNameAttribute: familyName
@@ -112,7 +112,7 @@ public extension DynamicFont {
    - Parameter italic: Flag to know whether the font need to be italic.
    - Returns: An italicized font object.
    */
-  public func italicized(_ italic: Bool = true) -> DynamicFont {
+  public func withItalic(_ italic: Bool = true) -> DynamicFont {
     var traits = fontDescriptor.symbolicTraits
 
     if italic {

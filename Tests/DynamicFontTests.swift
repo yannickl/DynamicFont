@@ -85,10 +85,10 @@ class DynamicFontTests: XCTestCase {
     XCTAssertEqual(font3?.weight, .ultraLight)
   }
 
-  func testWeighted() {
+  func testWithWeight() {
     let font = DynamicFont(family: .helveticaNeue, size: 12)
 
-    let font2 = font.weighted(weight: .ultraLight)
+    let font2 = font.withWeight(.ultraLight)
 
     XCTAssertEqual(font2.family, .helveticaNeue)
     XCTAssertEqual(font2.weight, .ultraLight)
@@ -96,7 +96,7 @@ class DynamicFontTests: XCTestCase {
     XCTAssertEqual(font2.pointSize, 12)
     XCTAssertEqual(font2.fontName, "HelveticaNeue-UltraLight")
 
-    let font3 = font.weighted(weight: .thin)
+    let font3 = font.withWeight(.thin)
 
     XCTAssertEqual(font3.family, .helveticaNeue)
     XCTAssertEqual(font3.weight, .thin)
@@ -104,7 +104,7 @@ class DynamicFontTests: XCTestCase {
     XCTAssertEqual(font3.pointSize, 12)
     XCTAssertEqual(font3.fontName, "HelveticaNeue-Thin")
 
-    let font4 = font.weighted(weight: .light)
+    let font4 = font.withWeight(.light)
 
     XCTAssertEqual(font4.family, .helveticaNeue)
     XCTAssertEqual(font4.weight, .light)
@@ -112,7 +112,7 @@ class DynamicFontTests: XCTestCase {
     XCTAssertEqual(font4.pointSize, 12)
     XCTAssertEqual(font4.fontName, "HelveticaNeue-Light")
 
-    let font5 = font.weighted(weight: .medium)
+    let font5 = font.withWeight(.medium)
 
     XCTAssertEqual(font5.family, .helveticaNeue)
     XCTAssertEqual(font5.weight, .medium)
@@ -120,7 +120,7 @@ class DynamicFontTests: XCTestCase {
     XCTAssertEqual(font5.pointSize, 12)
     XCTAssertEqual(font5.fontName, "HelveticaNeue-Medium")
 
-    let font6 = font.weighted(weight: .semibold)
+    let font6 = font.withWeight(.semibold)
 
     XCTAssertEqual(font6.family, .helveticaNeue)
     XCTAssertEqual(font6.weight, .medium)
@@ -128,7 +128,7 @@ class DynamicFontTests: XCTestCase {
     XCTAssertEqual(font6.pointSize, 12)
     XCTAssertEqual(font6.fontName, "HelveticaNeue-Medium")
 
-    let font7 = font.weighted(weight: .bold)
+    let font7 = font.withWeight(.bold)
 
     XCTAssertEqual(font7.family, .helveticaNeue)
     XCTAssertEqual(font7.weight, .bold)
@@ -136,7 +136,7 @@ class DynamicFontTests: XCTestCase {
     XCTAssertEqual(font7.pointSize, 12)
     XCTAssertEqual(font7.fontName, "HelveticaNeue-Bold")
 
-    let font8 = font.weighted(weight: .heavy)
+    let font8 = font.withWeight(.heavy)
 
     XCTAssertEqual(font8.family, .helveticaNeue)
     XCTAssertEqual(font8.weight, .bold)
@@ -144,7 +144,7 @@ class DynamicFontTests: XCTestCase {
     XCTAssertEqual(font8.pointSize, 12)
     XCTAssertEqual(font8.fontName, "HelveticaNeue-Bold")
 
-    let font9 = font.weighted(weight: .black)
+    let font9 = font.withWeight(.black)
 
     XCTAssertEqual(font9.family, .helveticaNeue)
     XCTAssertEqual(font9.weight, .black)
@@ -169,22 +169,22 @@ class DynamicFontTests: XCTestCase {
     XCTAssertTrue(font3!.isItalic)
   }
 
-  func testItalized() {
-    let font1 = DynamicFont(family: .helveticaNeue, size: 12).italicized()
+  func testWithItalic() {
+    let font1 = DynamicFont(family: .helveticaNeue, size: 12).withItalic()
 
     XCTAssertTrue(font1.isItalic)
     XCTAssertEqual(font1.fontName, "HelveticaNeue-Italic")
-    XCTAssertFalse(font1.italicized(false).isItalic)
-    XCTAssertEqual(font1.italicized(false).fontName, "HelveticaNeue")
+    XCTAssertFalse(font1.withItalic(false).isItalic)
+    XCTAssertEqual(font1.withItalic(false).fontName, "HelveticaNeue")
 
-    let font2 = DynamicFont(family: .helvetica, weight: .bold, size: 12).italicized()
+    let font2 = DynamicFont(family: .helvetica, weight: .bold, size: 12).withItalic()
 
     XCTAssertTrue(font2.isItalic)
     XCTAssertEqual(font2.fontName, "Helvetica-BoldOblique")
-    XCTAssertFalse(font2.italicized(false).isItalic)
-    XCTAssertEqual(font2.italicized(false).fontName, "Helvetica-Bold")
+    XCTAssertFalse(font2.withItalic(false).isItalic)
+    XCTAssertEqual(font2.withItalic(false).fontName, "Helvetica-Bold")
 
-    let font3 = DynamicFont(family: .appleSDGothicNeo, size: 12).italicized()
+    let font3 = DynamicFont(family: .appleSDGothicNeo, size: 12).withItalic()
 
     XCTAssertFalse(font3.isItalic)
     XCTAssertEqual(font3.fontName, "AppleSDGothicNeo-Regular")

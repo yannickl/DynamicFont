@@ -9,15 +9,9 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/yannickl/DynamicFont.git', :tag => s.version }
   s.screenshot       = 'http://yannickloriot.com/resources/dynamicfont-header.png'
 
-  s.ios.deployment_target     = '10.0'
-  s.osx.deployment_target     = '10.11'
-  s.tvos.deployment_target    = '10.0'
-  s.watchos.deployment_target = '3.0'
+  s.ios.deployment_target = '10.0'
 
-  s.ios.framework     = 'UIKit'
-  s.osx.framework     = 'AppKit'
-  s.tvos.framework    = 'UIKit'
-  s.watchos.framework = 'UIKit'
+  s.ios.framework = 'UIKit'
 
   s.source_files = 'Sources/*.swift'
   s.requires_arc = true

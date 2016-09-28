@@ -25,8 +25,8 @@ class ViewController: UIViewController {
  
     let font = DynamicFont(family: .helveticaNeue, size: 12)
 
-    print("=>", font.weighted(weight: .bold).fontName)
-    print("=>", font.italicized().fontName)
+    print("=>", font.withWeight(.bold).fontName)
+    print("=>", font.withItalic().fontName)
 
     _ = UIFont.familyNames.map({ "/// The `\($0)` font family.\ncase \($0.lowercaseFirstLetter().replacingOccurrences(of: " ", with: "")) = \"\($0)\"\n" }).joined()
   }
