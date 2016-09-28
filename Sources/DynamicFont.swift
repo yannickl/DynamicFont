@@ -84,7 +84,7 @@ public extension DynamicFont {
    If the font can not be weighted with the corresponding value the returned font is the same as the receiver.
    
    - Parameter weight: The desired font weight. The default value is `bold`.
-   - Returns: An weighted font object.
+   - Returns: A weighted font object.
    */
   public func withWeight(_ weight: DynamicFontWeight = .bold) -> DynamicFont {
     let descriptor = fontDescriptor.addingAttributes([

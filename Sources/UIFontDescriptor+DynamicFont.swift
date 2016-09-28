@@ -42,7 +42,7 @@ extension UIFontDescriptor {
     return addingTraits(tmp)
   }
 
-  public var font: DynamicFont {
+  var font: DynamicFont {
     return UIFont(descriptor: self, size: 0)
   }
 
