@@ -27,19 +27,11 @@
 import UIKit
 
 extension UIFontDescriptor {
-  var name: String {
-    return object(forKey: UIFontDescriptorNameAttribute) as? String ?? ""
-  }
-
-  var family: String {
-    return object(forKey: UIFontDescriptorFamilyAttribute) as? String ?? ""
-  }
-
   var weight: DynamicFontWeight {
     get {
-      let trait = traits[UIFontWeightTrait] as? CGFloat ?? 0
+      let weightTrait = traits[UIFontWeightTrait] as! CGFloat
 
-      return DynamicFontWeight.fromTrait(trait: trait)
+      return DynamicFontWeight.fromTrait(trait: weightTrait)
     }
   }
 
@@ -47,21 +39,11 @@ extension UIFontDescriptor {
     var tmp                = traits
     tmp[UIFontWeightTrait] = weight.traitValue as AnyObject?
 
-    return setTraits(tmp)
-  }
-
-  public var size: CGFloat {
-    return object(forKey: UIFontDescriptorSizeAttribute) as? CGFloat ?? 0
+    return addingTraits(tmp)
   }
 
   public var font: DynamicFont {
     return UIFont(descriptor: self, size: 0)
-  }
-
-  // MARK: - Initialisers
-
-  convenience init(font: DynamicFont) {
-    self.init(name: font.familyName, size: font.pointSize)
   }
 
   // MARK: - Convenience Methods
@@ -70,7 +52,7 @@ extension UIFontDescriptor {
     return object(forKey: UIFontDescriptorTraitsAttribute) as? [String: AnyObject] ?? [:]
   }
 
-  func setTraits(_ traits: [String: AnyObject]) -> UIFontDescriptor {
+  func addingTraits(_ traits: [String: AnyObject]) -> UIFontDescriptor {
     return addingAttributes([UIFontDescriptorTraitsAttribute: traits as Any])
   }
 }

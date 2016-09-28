@@ -22,7 +22,7 @@ extension String {
 class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-
+ 
     let font = DynamicFont(family: .helveticaNeue, size: 12)
 
     print("=>", font.weighted(weight: .bold).fontName)

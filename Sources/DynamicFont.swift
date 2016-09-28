@@ -58,10 +58,11 @@ public extension DynamicFont {
    */
   public convenience init(familyName: String, weight: DynamicFontWeight = .regular, size: CGFloat) {
     let descriptor = UIFontDescriptor(fontAttributes: [
-      UIFontDescriptorFamilyAttribute: familyName
+      UIFontDescriptorFamilyAttribute: familyName,
+      UIFontDescriptorSizeAttribute: size
       ]).weighted(weight: weight)
 
-    self.init(descriptor: descriptor, size: size)
+    self.init(descriptor: descriptor, size: 0)
   }
 
   // MARK: - Getting Font Family
@@ -78,7 +79,7 @@ public extension DynamicFont {
   // MARK: - Working with Font Attributes
 
   /**
-   Returns a new font object that is rendered with the given weight.
+   Create a new font that is identical to the current font except the weight.
    
    If the font can not be weighted with the corresponding value the returned font is the same as the receiver.
    
@@ -86,7 +87,12 @@ public extension DynamicFont {
    - Returns: An weighted font object.
    */
   public func weighted(weight: DynamicFontWeight = .bold) -> DynamicFont {
-    return UIFontDescriptor(font: self).weighted(weight: weight).font
+    let descriptor = fontDescriptor.addingAttributes([
+      UIFontDescriptorFamilyAttribute: familyName,
+      UIFontDescriptorNameAttribute: familyName
+      ])
+    
+    return descriptor.weighted(weight: weight).font
   }
 
   /**
@@ -95,7 +101,7 @@ public extension DynamicFont {
    - Returns: A font weight.
    */
   public var weight: DynamicFontWeight {
-    return UIFontDescriptor(font: self).weight
+    return fontDescriptor.weight
   }
 
   /**
@@ -106,12 +112,16 @@ public extension DynamicFont {
    - Returns: An italicized font object.
    */
   public func italicized() -> DynamicFont {
-    let descriptor = UIFontDescriptor(font: self)
-    var traits     = descriptor.symbolicTraits
+    var traits = fontDescriptor.symbolicTraits
 
     traits.insert(.traitItalic)
 
-    return descriptor.withSymbolicTraits(traits)?.font ?? UIFontDescriptor(font: self).font
+    let descriptor = fontDescriptor.addingAttributes([
+      UIFontDescriptorFamilyAttribute: familyName,
+      UIFontDescriptorNameAttribute: familyName
+      ])
+
+    return descriptor.withSymbolicTraits(traits)?.font ?? fontDescriptor.font
   }
 
   /**
@@ -120,7 +130,7 @@ public extension DynamicFont {
    - Returns: A boolean indicates whether the font is in italic.
    */
   public var isItalic: Bool {
-    return UIFontDescriptor(font: self).symbolicTraits.contains(.traitItalic)
+    return fontDescriptor.symbolicTraits.contains(.traitItalic)
   }
 
   // MARK: - Bridging Font Descriptor
@@ -132,13 +142,13 @@ public extension DynamicFont {
    - Returns: The new font descriptor.
    */
   public func withSymbolicTraits(_ symbolicTraits: UIFontDescriptorSymbolicTraits) -> DynamicFont {
-    return UIFontDescriptor(font: self).withSymbolicTraits(symbolicTraits)?.font ?? UIFontDescriptor(font: self).font
+    return fontDescriptor.withSymbolicTraits(symbolicTraits)?.font ?? fontDescriptor.font
   }
 
   /**
    A bit mask that describes the traits of the receiver.
    */
   public var symbolicTraits: UIFontDescriptorSymbolicTraits {
-    return UIFontDescriptor(font: self).symbolicTraits
+    return fontDescriptor.symbolicTraits
   }
 }

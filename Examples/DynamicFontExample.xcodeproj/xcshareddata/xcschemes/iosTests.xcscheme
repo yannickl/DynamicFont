@@ -17,9 +17,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE5787BE1D884C25003C89A3"
-               BuildableName = "DynamicFontTests.xctest"
-               BlueprintName = "DynamicFontTests"
+               BlueprintIdentifier = "CEA266C31D9A81D200A0FC0B"
+               BuildableName = "iosTests.xctest"
+               BlueprintName = "iosTests"
                ReferencedContainer = "container:DynamicFontExample.xcodeproj">
             </BuildableReference>
          </TestableReference>

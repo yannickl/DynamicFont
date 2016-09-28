@@ -9,34 +9,28 @@
 /* Begin PBXBuildFile section */
 		CE2927911D9049C8000675F7 /* DynamicFontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2927901D9049C8000675F7 /* DynamicFontFamily.swift */; };
 		CE2927921D9049C8000675F7 /* DynamicFontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2927901D9049C8000675F7 /* DynamicFontFamily.swift */; };
-		CE2927931D9049CF000675F7 /* DynamicFontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2927901D9049C8000675F7 /* DynamicFontFamily.swift */; };
 		CE5787A91D884BE1003C89A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787A81D884BE1003C89A3 /* AppDelegate.swift */; };
 		CE5787AB1D884BE1003C89A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787AA1D884BE1003C89A3 /* ViewController.swift */; };
 		CE5787AE1D884BE1003C89A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5787AC1D884BE1003C89A3 /* Main.storyboard */; };
 		CE5787B01D884BE1003C89A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5787AF1D884BE1003C89A3 /* Assets.xcassets */; };
 		CE5787B31D884BE1003C89A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5787B11D884BE1003C89A3 /* LaunchScreen.storyboard */; };
 		CE5787CA1D884C53003C89A3 /* DynamicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787C91D884C53003C89A3 /* DynamicFont.swift */; };
-		CE5787CB1D884C53003C89A3 /* DynamicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787C91D884C53003C89A3 /* DynamicFont.swift */; };
 		CE5787D61D885279003C89A3 /* DynamicFont.h in Headers */ = {isa = PBXBuildFile; fileRef = CE5787D41D885279003C89A3 /* DynamicFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE5787DA1D88528A003C89A3 /* DynamicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787C91D884C53003C89A3 /* DynamicFont.swift */; };
 		CE5787DC1D8852C4003C89A3 /* DynamicFont.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5787D21D885278003C89A3 /* DynamicFont.framework */; };
 		CE5787DD1D8852C4003C89A3 /* DynamicFont.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE5787D21D885278003C89A3 /* DynamicFont.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE5787E21D885352003C89A3 /* DynamicFontWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787E11D885352003C89A3 /* DynamicFontWeight.swift */; };
 		CE5787E31D88536C003C89A3 /* DynamicFontWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787E11D885352003C89A3 /* DynamicFontWeight.swift */; };
-		CE5787E41D88536E003C89A3 /* DynamicFontWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787E11D885352003C89A3 /* DynamicFontWeight.swift */; };
 		CE5787E61D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787E51D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift */; };
 		CE5787E71D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787E51D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift */; };
-		CE5787E81D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787E51D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift */; };
+		CEA266CD1D9A82DB00A0FC0B /* DynamicFontTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA266CC1D9A82DB00A0FC0B /* DynamicFontTests.swift */; };
+		CEA266CE1D9A82FF00A0FC0B /* DynamicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787C91D884C53003C89A3 /* DynamicFont.swift */; };
+		CEA266CF1D9A82FF00A0FC0B /* DynamicFontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2927901D9049C8000675F7 /* DynamicFontFamily.swift */; };
+		CEA266D01D9A82FF00A0FC0B /* DynamicFontWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787E11D885352003C89A3 /* DynamicFontWeight.swift */; };
+		CEA266D11D9A82FF00A0FC0B /* UIFontDescriptor+DynamicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5787E51D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CE5787C41D884C25003C89A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CE57879D1D884BE1003C89A3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CE5787A41D884BE1003C89A3;
-			remoteInfo = DynamicFontExample;
-		};
 		CE5787DE1D8852C4003C89A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE57879D1D884BE1003C89A3 /* Project object */;
@@ -69,8 +63,6 @@
 		CE5787AF1D884BE1003C89A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5787B21D884BE1003C89A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE5787B41D884BE1003C89A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE5787BF1D884C25003C89A3 /* DynamicFontTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicFontTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE5787C31D884C25003C89A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE5787C91D884C53003C89A3 /* DynamicFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicFont.swift; sourceTree = "<group>"; };
 		CE5787CC1D8851D9003C89A3 /* Examples.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Examples.playground; sourceTree = "<group>"; };
 		CE5787D21D885278003C89A3 /* DynamicFont.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicFont.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +70,9 @@
 		CE5787D51D885279003C89A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE5787E11D885352003C89A3 /* DynamicFontWeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicFontWeight.swift; sourceTree = "<group>"; };
 		CE5787E51D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFontDescriptor+DynamicFont.swift"; sourceTree = "<group>"; };
+		CEA266C41D9A81D200A0FC0B /* iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA266C81D9A81D200A0FC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA266CC1D9A82DB00A0FC0B /* DynamicFontTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicFontTests.swift; path = ../../Tests/DynamicFontTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,14 +84,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE5787BC1D884C25003C89A3 /* Frameworks */ = {
+		CE5787CE1D885278003C89A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE5787CE1D885278003C89A3 /* Frameworks */ = {
+		CEA266C11D9A81D200A0FC0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -111,8 +106,8 @@
 			children = (
 				CE5787BA1D884C0B003C89A3 /* Sources */,
 				CE5787A71D884BE1003C89A3 /* DynamicFontExample */,
-				CE5787C01D884C25003C89A3 /* DynamicFontTests */,
 				CE5787D31D885279003C89A3 /* DynamicFont */,
+				CEA266C51D9A81D200A0FC0B /* iosTests */,
 				CE5787A61D884BE1003C89A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				CE5787A51D884BE1003C89A3 /* DynamicFontExample.app */,
-				CE5787BF1D884C25003C89A3 /* DynamicFontTests.xctest */,
 				CE5787D21D885278003C89A3 /* DynamicFont.framework */,
+				CEA266C41D9A81D200A0FC0B /* iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,14 +148,6 @@
 			path = ../Sources;
 			sourceTree = "<group>";
 		};
-		CE5787C01D884C25003C89A3 /* DynamicFontTests */ = {
-			isa = PBXGroup;
-			children = (
-				CE5787C31D884C25003C89A3 /* Info.plist */,
-			);
-			path = DynamicFontTests;
-			sourceTree = "<group>";
-		};
 		CE5787D31D885279003C89A3 /* DynamicFont */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +155,15 @@
 				CE5787D51D885279003C89A3 /* Info.plist */,
 			);
 			path = DynamicFont;
+			sourceTree = "<group>";
+		};
+		CEA266C51D9A81D200A0FC0B /* iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEA266C81D9A81D200A0FC0B /* Info.plist */,
+				CEA266CC1D9A82DB00A0FC0B /* DynamicFontTests.swift */,
+			);
+			path = iosTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,24 +199,6 @@
 			productReference = CE5787A51D884BE1003C89A3 /* DynamicFontExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE5787BE1D884C25003C89A3 /* DynamicFontTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CE5787C61D884C25003C89A3 /* Build configuration list for PBXNativeTarget "DynamicFontTests" */;
-			buildPhases = (
-				CE5787BB1D884C25003C89A3 /* Sources */,
-				CE5787BC1D884C25003C89A3 /* Frameworks */,
-				CE5787BD1D884C25003C89A3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CE5787C51D884C25003C89A3 /* PBXTargetDependency */,
-			);
-			name = DynamicFontTests;
-			productName = DynamicFontTests;
-			productReference = CE5787BF1D884C25003C89A3 /* DynamicFontTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		CE5787D11D885278003C89A3 /* DynamicFont */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE5787D71D885279003C89A3 /* Build configuration list for PBXNativeTarget "DynamicFont" */;
@@ -239,6 +217,23 @@
 			productReference = CE5787D21D885278003C89A3 /* DynamicFont.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		CEA266C31D9A81D200A0FC0B /* iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA266C91D9A81D200A0FC0B /* Build configuration list for PBXNativeTarget "iosTests" */;
+			buildPhases = (
+				CEA266C01D9A81D200A0FC0B /* Sources */,
+				CEA266C11D9A81D200A0FC0B /* Frameworks */,
+				CEA266C21D9A81D200A0FC0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iosTests;
+			productName = iosTests;
+			productReference = CEA266C41D9A81D200A0FC0B /* iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -254,16 +249,14 @@
 						DevelopmentTeam = N8Y92BXSXC;
 						ProvisioningStyle = Automatic;
 					};
-					CE5787BE1D884C25003C89A3 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = N8Y92BXSXC;
-						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
-						TestTargetID = CE5787A41D884BE1003C89A3;
-					};
 					CE5787D11D885278003C89A3 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = N8Y92BXSXC;
+						ProvisioningStyle = Automatic;
+					};
+					CEA266C31D9A81D200A0FC0B = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -283,7 +276,7 @@
 			targets = (
 				CE5787D11D885278003C89A3 /* DynamicFont */,
 				CE5787A41D884BE1003C89A3 /* DynamicFontExample */,
-				CE5787BE1D884C25003C89A3 /* DynamicFontTests */,
+				CEA266C31D9A81D200A0FC0B /* iosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -299,14 +292,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE5787BD1D884C25003C89A3 /* Resources */ = {
+		CE5787D01D885278003C89A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE5787D01D885278003C89A3 /* Resources */ = {
+		CEA266C21D9A81D200A0FC0B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,17 +322,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE5787BB1D884C25003C89A3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CE5787E41D88536E003C89A3 /* DynamicFontWeight.swift in Sources */,
-				CE2927931D9049CF000675F7 /* DynamicFontFamily.swift in Sources */,
-				CE5787CB1D884C53003C89A3 /* DynamicFont.swift in Sources */,
-				CE5787E81D88570A003C89A3 /* UIFontDescriptor+DynamicFont.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CE5787CD1D885278003C89A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,14 +333,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEA266C01D9A81D200A0FC0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA266CE1D9A82FF00A0FC0B /* DynamicFont.swift in Sources */,
+				CEA266D11D9A82FF00A0FC0B /* UIFontDescriptor+DynamicFont.swift in Sources */,
+				CEA266CD1D9A82DB00A0FC0B /* DynamicFontTests.swift in Sources */,
+				CEA266D01D9A82FF00A0FC0B /* DynamicFontWeight.swift in Sources */,
+				CEA266CF1D9A82FF00A0FC0B /* DynamicFontFamily.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CE5787C51D884C25003C89A3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CE5787A41D884BE1003C89A3 /* DynamicFontExample */;
-			targetProxy = CE5787C41D884C25003C89A3 /* PBXContainerItemProxy */;
-		};
 		CE5787DF1D8852C4003C89A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CE5787D11D885278003C89A3 /* DynamicFont */;
@@ -507,37 +496,6 @@
 			};
 			name = Release;
 		};
-		CE5787C71D884C25003C89A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = N8Y92BXSXC;
-				INFOPLIST_FILE = DynamicFontTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yannickloriot.DynamicFontTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicFontExample.app/DynamicFontExample";
-			};
-			name = Debug;
-		};
-		CE5787C81D884C25003C89A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = N8Y92BXSXC;
-				INFOPLIST_FILE = DynamicFontTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yannickloriot.DynamicFontTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicFontExample.app/DynamicFontExample";
-			};
-			name = Release;
-		};
 		CE5787D81D885279003C89A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -582,6 +540,31 @@
 			};
 			name = Release;
 		};
+		CEA266CA1D9A81D200A0FC0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = iosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannickloriot.iosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CEA266CB1D9A81D200A0FC0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = iosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yannickloriot.iosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -603,20 +586,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE5787C61D884C25003C89A3 /* Build configuration list for PBXNativeTarget "DynamicFontTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CE5787C71D884C25003C89A3 /* Debug */,
-				CE5787C81D884C25003C89A3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		CE5787D71D885279003C89A3 /* Build configuration list for PBXNativeTarget "DynamicFont" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE5787D81D885279003C89A3 /* Debug */,
 				CE5787D91D885279003C89A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA266C91D9A81D200A0FC0B /* Build configuration list for PBXNativeTarget "iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA266CA1D9A81D200A0FC0B /* Debug */,
+				CEA266CB1D9A81D200A0FC0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
