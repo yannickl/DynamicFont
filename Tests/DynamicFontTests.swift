@@ -40,6 +40,35 @@ class DynamicFontTests: XCTestCase {
     XCTAssertEqual(font3.fontName, "Avenir-Heavy")
   }
 
+  func testInitWithFamillyName() {
+    let font = DynamicFont(familyName: "WrongFamilyName", size: 12)
+
+    XCTAssertEqual(font.family, .helvetica)
+    XCTAssertEqual(font.weight, .regular)
+    XCTAssertFalse(font.isItalic)
+    XCTAssertEqual(font.pointSize, 12)
+    XCTAssertEqual(font.fontName, "Helvetica")
+  }
+
+  func testFamilly() {
+    let font1 = DynamicFont(family: .helveticaNeue, size: 12)
+
+    XCTAssertEqual(font1.family, .helveticaNeue)
+
+    let font2 = DynamicFont(familyName: "Zapfino", size: 12)
+
+    XCTAssertEqual(font2.family, .zapfino)
+
+    let font3 = DynamicFont(name: "AvenirNext-UltraLightItalic", size: 10)
+
+    XCTAssertNotNil(font3)
+    XCTAssertEqual(font3?.family, .avenirNext)
+
+    let font4 = DynamicFont(name: "WrongFontName", size: 10)
+
+    XCTAssertNil(font4)
+  }
+
   func testWeight() {
     let font1 = DynamicFont(family: .helveticaNeue, size: 12)
 
@@ -138,5 +167,42 @@ class DynamicFontTests: XCTestCase {
 
     XCTAssertNotNil(font3)
     XCTAssertTrue(font3!.isItalic)
+  }
+
+  func testItalized() {
+    let font1 = DynamicFont(family: .helveticaNeue, size: 12).italicized()
+
+    XCTAssertTrue(font1.isItalic)
+    XCTAssertEqual(font1.fontName, "HelveticaNeue-Italic")
+    XCTAssertFalse(font1.italicized(false).isItalic)
+    XCTAssertEqual(font1.italicized(false).fontName, "HelveticaNeue")
+
+    let font2 = DynamicFont(family: .helvetica, weight: .bold, size: 12).italicized()
+
+    XCTAssertTrue(font2.isItalic)
+    XCTAssertEqual(font2.fontName, "Helvetica-BoldOblique")
+    XCTAssertFalse(font2.italicized(false).isItalic)
+    XCTAssertEqual(font2.italicized(false).fontName, "Helvetica-Bold")
+
+    let font3 = DynamicFont(family: .appleSDGothicNeo, size: 12).italicized()
+
+    XCTAssertFalse(font3.isItalic)
+    XCTAssertEqual(font3.fontName, "AppleSDGothicNeo-Regular")
+  }
+
+  func testSymbolicTraits() {
+    let font1 = DynamicFont(family: .arial, size: 12)
+
+    XCTAssertNotNil(font1.symbolicTraits)
+  }
+
+  func testWithSymbolicTraits() {
+    let font1 = DynamicFont(family: .arial, size: 12).withSymbolicTraits(.traitItalic)
+
+    XCTAssertTrue(font1.symbolicTraits.contains(.traitItalic))
+
+    let font2 = DynamicFont(family: .appleSDGothicNeo, size: 12).withSymbolicTraits(.traitItalic)
+
+    XCTAssertFalse(font2.symbolicTraits.contains(.traitItalic))
   }
 }

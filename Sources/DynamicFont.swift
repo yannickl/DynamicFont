@@ -73,7 +73,7 @@ public extension DynamicFont {
    A family is a constant value such as `.timesNewRoman` that identifies one or more specific fonts.
    */
   public var family: DynamicFontFamily {
-    return DynamicFontFamily(rawValue: familyName) ?? .helvetica
+    return DynamicFontFamily(rawValue: familyName)!
   }
 
   // MARK: - Working with Font Attributes
@@ -105,16 +105,22 @@ public extension DynamicFont {
   }
 
   /**
-   Returns a new font object that is rendered in italic type.
+   Returns a new font object that is rendered in italic type according the given flag.
 
    If the font can not be italicized the returned font is the same as the receiver.
 
+   - Parameter italic: Flag to know whether the font need to be italic.
    - Returns: An italicized font object.
    */
-  public func italicized() -> DynamicFont {
+  public func italicized(_ italic: Bool = true) -> DynamicFont {
     var traits = fontDescriptor.symbolicTraits
 
-    traits.insert(.traitItalic)
+    if italic {
+      traits.insert(.traitItalic)
+    }
+    else {
+      traits.remove(.traitItalic)
+    }
 
     let descriptor = fontDescriptor.addingAttributes([
       UIFontDescriptorFamilyAttribute: familyName,
@@ -136,6 +142,13 @@ public extension DynamicFont {
   // MARK: - Bridging Font Descriptor
 
   /**
+   A bit mask that describes the traits of the receiver.
+   */
+  public var symbolicTraits: UIFontDescriptorSymbolicTraits {
+    return fontDescriptor.symbolicTraits
+  }
+
+  /**
    Returns a new dynamic font that is the same as the receiver but with the specified symbolic traits taking precedence over the existing ones.
 
    - Parameter symbolicTraits: The new symbolic traits.
@@ -143,12 +156,5 @@ public extension DynamicFont {
    */
   public func withSymbolicTraits(_ symbolicTraits: UIFontDescriptorSymbolicTraits) -> DynamicFont {
     return fontDescriptor.withSymbolicTraits(symbolicTraits)?.font ?? fontDescriptor.font
-  }
-
-  /**
-   A bit mask that describes the traits of the receiver.
-   */
-  public var symbolicTraits: UIFontDescriptorSymbolicTraits {
-    return fontDescriptor.symbolicTraits
   }
 }
