@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DynamicFont'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.license          = 'MIT'
   s.summary          = 'Yet another extension to manipulate fonts easily in Swift'
   s.homepage         = 'https://github.com/yannickl/DynamicFont.git'
