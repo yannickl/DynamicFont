@@ -153,9 +153,8 @@ Note that the [Swift Package Manager](https://swift.org/package-manager) is stil
 ## Contact
 
 Yannick Loriot
+ - [https://21.co/yannickl/](https://21.co/yannickl/)
  - [https://twitter.com/yannickloriot](https://twitter.com/yannickloriot)
- - [contact@yannickloriot.com](mailto:contact@yannickloriot.com)
-
 
 ## License (MIT)
 
